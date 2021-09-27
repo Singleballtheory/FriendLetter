@@ -25,13 +25,14 @@ namespace FriendLetter.Controllers
     public ActionResult Form() { return View(); }
 
     [Route("/postcard")]
-    public ActionResult Postcard(string recipient, string sender, string destination, string dreamDestination)
+    public ActionResult Postcard(string recipient, string sender, string destination, string dreamDestination, string trinket)
     {
       LetterVariable myLetterVariable = new LetterVariable();
       myLetterVariable.Recipient = recipient;
       myLetterVariable.Sender = sender;
       myLetterVariable.Destination = destination;
       myLetterVariable.DreamDestination = dreamDestination;
+      myLetterVariable.Trinket = trinket;
       return View(myLetterVariable);
     }
 
